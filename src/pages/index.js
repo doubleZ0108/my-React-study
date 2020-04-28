@@ -10,7 +10,7 @@ const IndexPage = () => (
         <Header />
         <div className="Hero">
             <div className="HeroGroup">
-                <h1>Hello World doubleZ</h1>
+                <h1>Hello World<br/> doubleZ</h1>
                 <p>I am doubleZ major in Software Engineering in Tongji University.</p>
                 <Link to="#">click me</Link>
             </div>
