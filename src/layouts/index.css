@@ -17,6 +17,7 @@ a {
     height: 920px;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .HeroGroup {
@@ -65,6 +66,7 @@ a {
     color: black;
 }
 
+/* 适配手机 */
 @media (max-width: 640px) {
     .HeroGroup {
         padding: 100px 20px;
@@ -77,6 +79,7 @@ a {
     }
 }
 
+/* 入场文字浮动动画 */
 @keyframes HeroAnimation {
     0% {
         opacity: 0;
@@ -85,5 +88,26 @@ a {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* 流动动画 */
+.Hero svg {
+    position: absolute; /* 随页面滚动的绝对定位 */
+    bottom: 0;
+    left: 0;
+}
+
+.Hero .Logos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  /* equally divided */
+    grid-gap: 40px;
+    margin: 100px 0;
+    justify-items: center;
+}
+
+@media (max-width:640px) {
+    .Hero .Logos {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
