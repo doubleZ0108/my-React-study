@@ -2,9 +2,12 @@ import React from "react"
 import Link from "gatsby-link"
 import '../layouts/index.css'
 
+import Header from "../components/header.js"
+
 // export default () => <div>Hello world!</div>
 const IndexPage = () => (
     <div>
+        <Header />
         <div className="Hero">
             <div className="HeroGroup">
                 <h1>Hello World doubleZ</h1>
