@@ -31,3 +31,5 @@ gatsby develop
 > https://www.gatsbyjs.cn/tutorial/part-zero/
 >
 > npm install -g bcrypt 
+
+- css加载url图像：`npm install --save url-loader`

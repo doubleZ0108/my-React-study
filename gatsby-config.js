@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'doubleZ my-React-study',
+  },
   /* Your site config here */
   plugins: [],
 }
