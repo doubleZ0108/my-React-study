@@ -1,5 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
+import styled from 'styled-components'
+
 import '../layouts/index.css'
 
 import Header from "../components/header.js"
@@ -14,6 +16,29 @@ import sketchlogo from "../images/logo-sketch.png"
 import swiftlogo from "../images/logo-swift.png"
 import icon from "../images/icon.png"
 import Wave from "../components/wave"
+
+import staticdata from "../../staticdata.json"
+import Cell from "../components/cell"
+
+
+const SectionCaption = styled.p`
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #94A4BA;
+    text-align: center;
+`
+const SectionCellGroup = styled.div`
+    max-width: 800;
+    margin: 0 auto 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    padding: 0 20px;
+    @media (max-width: 640px){
+        grid-template-columns: repeat(1,1fr);
+    }
+`
 
 // export default () => <div>Hello world!</div>
 const IndexPage = () => (
@@ -66,6 +91,17 @@ const IndexPage = () => (
             title="Title for Section"
             text="Text for the section. Text for the section. Text for the section. Text for the section.Text for the section. Text for the section. Text for the section. Text for the section"
         />
+        
+        <SectionCaption>Section title</SectionCaption>
+        <SectionCellGroup>
+            {staticdata.cells.map(cell => (
+            <Cell 
+                title={cell.title} 
+                image={cell.image}
+            />
+            ))}
+        </SectionCellGroup>
+        
     </div>
 )
 
