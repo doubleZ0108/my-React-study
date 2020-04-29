@@ -49,22 +49,22 @@ const IndexPage = () => (
             <Card 
                 title="React for Designers" 
                 text="12 section"
-                image={require('../images/wallpaper2.jpg')}
+                image={require('../images/wallpaper1.jpg')}
             />
             <Card 
                 title="Swift for Designers" 
                 text="12 section"
-                image={require('../images/wallpaper3.jpg')}
+                image={require('../images/wallpaper2.jpg')}
             />
             <Card 
                 title="Vue for Designers" 
                 text="12 section"
-                image={require('../images/wallpaper2.jpg')}
+                image={require('../images/wallpaper3.jpg')}
             />
             <Card 
                 title="JS for Designers" 
                 text="12 section"
-                image={require('../images/wallpaper3.jpg')}
+                image={require('../images/wallpaper4.jpg')}
             />
             </div>
         </div>
