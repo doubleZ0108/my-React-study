@@ -60,7 +60,7 @@ const Copyright = styled.div`
 const Footer = ({ data, children }) => (
     <div>
         <FooterGroup>
-            <Text>footer text text text</Text>
+            <Text>fresh footer text</Text>
             <Button>Tweet</Button>
             <LinkGroup>
             {data.allContentfulLink.edges.map(edge => (
