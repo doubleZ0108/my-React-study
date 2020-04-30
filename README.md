@@ -35,9 +35,22 @@ gatsby build
 > npm install -g bcrypt 
 
 - css加载url图像：`npm install --save url-loader`
-- Contentful: `npm install -s gatsby-sour
-  ce-contentful`
+- Contentful: `npm install -s gatsby-source-contentful`
 
 > 引用Contentful报错的话
 >
 > 直接删除对应目录下的fragment.js即可
+
+```bash
+gatsby new [project-name] https://github.com/gatsbyjs/gatsby-starter-hello-world
+cd [project-name]
+# 连接git
+
+# npm install --save url-loader gatsby-source-contentful
+
+gatsby develop
+# localhost:8000
+
+sudo npm -g --unsafe-perm install gatsby-source-contentful
+```
+
