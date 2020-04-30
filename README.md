@@ -33,3 +33,9 @@ gatsby develop
 > npm install -g bcrypt 
 
 - css加载url图像：`npm install --save url-loader`
+- Contentful: `npm install -s gatsby-sour
+  ce-contentful`
+
+> 引用Contentful报错的话
+>
+> 直接删除对应目录下的fragment.js即可

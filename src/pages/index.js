@@ -1,6 +1,8 @@
 import React from "react"
 import Link from "gatsby-link"
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 
 import '../layouts/index.css'
 
@@ -19,6 +21,7 @@ import Wave from "../components/wave"
 
 import staticdata from "../../staticdata.json"
 import Cell from "../components/cell"
+import Footer from "../components/foot"
 
 
 const SectionCaption = styled.p`
@@ -41,7 +44,7 @@ const SectionCellGroup = styled.div`
 `
 
 // export default () => <div>Hello world!</div>
-const IndexPage = () => (
+const IndexPage = ({ children, data }) => (
     <div>
         <Header />
         <div className="Hero">
@@ -101,8 +104,34 @@ const IndexPage = () => (
             />
             ))}
         </SectionCellGroup>
-        
+
+        <Footer data={data}>
+        {/* 接收方使用children可以将这里的html也都拿过去 */}
+            Copyright &copy; doubleZ
+            <a href="mailto:doubleZ0108@163.com">Email us</a>
+        </Footer>
     </div>
 )
 
 export default IndexPage
+
+export const query = graphql`
+    query SiteTitleQuery {
+        site {
+            siteMetadata {
+                title
+                description
+                keywords
+            }
+        }
+        allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
+            edges {
+              node {
+                title
+                url
+                createdAt
+              }
+            }
+          }
+    }
+`

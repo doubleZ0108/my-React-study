@@ -7,7 +7,17 @@
 module.exports = {
   siteMetadata: {
     title: 'doubleZ my-React-study',
+    description: 'description of my website',
+    keywords: 'key1, key2'
   },
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    { 
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'q0r4vbd3sc7a',
+        accessToken: 'PG4Nq8DR-eNmLIs9odxkwcohxdHSAZM6rrvYKi5xP0Y'
+      }
+    }
+  ],
 }
