@@ -20,6 +20,8 @@ gatsby new my-app https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd my-app
 gatsby develop
 # localhost:8000
+
+gatsby build
 ```
 
 ![img](https://img-blog.csdnimg.cn/20190620172009527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTAxODI4MTE=,size_16,color_FFFFFF,t_70)
