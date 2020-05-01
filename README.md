@@ -6,6 +6,8 @@
 
 ## 环境搭建
 
+### 空白gatsby-starter
+
 ```bash
 brew install node
 sudo npm install --global gatsby-cli
@@ -52,5 +54,30 @@ gatsby develop
 # localhost:8000
 
 sudo npm -g --unsafe-perm install gatsby-source-contentful
+```
+
+
+
+### gatsby-contentful-starter
+
+```bash
+## 下载template
+git clone https://github.com/contentful-userland/gatsby-contentful-starter
+
+## 安装依赖
+# gatsby sharp contentful相关已经装好
+npm install -s gatsby-transformer-remark
+npm install -s gatsby-transformer-sharp
+npm install -s gatsby-plugin-react-helmet
+
+## 设置Contentful API
+yarn run setup
+# (这里多尝试几次，如果不行就跑一下 yarn install)
+# 输入Space ID / Content Management API / Delivery API
+# (注意第二个API的位置在另一个tab里)
+
+yarn run dev
+
+# localhost:8000
 ```
 
